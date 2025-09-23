@@ -1,0 +1,255 @@
+$page-max-width: 1080px;
+$purple: #7d2d9d;
+$pink: #c74d8d;
+$yellow: #fdd92c;
+$orange: #e88667;
+$off-black: #1b1025;
+$soft-white: rgba(255, 255, 255, 0.92);
+
+.page-shell {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(13, 5, 24, 0.86) 0%, rgba(21, 8, 34, 0.96) 100%);
+  color: $soft-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5rem 1.5rem 2.5rem;
+  gap: 4rem;
+  position: relative;
+}
+
+.hero {
+  width: 100%;
+  max-width: $page-max-width;
+  background: linear-gradient(135deg, rgba(125, 45, 157, 0.28), rgba(253, 217, 44, 0.14));
+  border-radius: 32px;
+  padding: 3.5rem clamp(1.5rem, 3vw, 3rem);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 32px 64px rgba(10, 4, 18, 0.45);
+
+  &__halo {
+    position: absolute;
+    inset: -20% -10% auto auto;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(253, 217, 44, 0.45), rgba(253, 217, 44, 0));
+    filter: blur(18px);
+    opacity: 0.65;
+  }
+
+  &__header {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 2rem;
+    justify-items: start;
+  }
+
+  &__logo-stack {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  &__brand-name {
+    font-family: "Baron", "Poppins", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 8px 24px rgba(60, 7, 92, 0.6);
+  }
+
+  &__tagline {
+    font-size: clamp(1.75rem, 3.5vw, 2.3rem);
+    line-height: 1.25;
+    max-width: 22ch;
+    font-weight: 500;
+    color: $soft-white;
+    text-shadow: 0 12px 30px rgba(17, 6, 30, 0.6);
+  }
+
+  &__cta-group {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+}
+
+.action-button {
+  padding: 0.95rem 2.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  color: $off-black;
+  background: white;
+  box-shadow: 0 18px 36px rgba(125, 45, 157, 0.35);
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 42px rgba(199, 77, 141, 0.45);
+  }
+
+  &--secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    box-shadow: none;
+
+    &:hover,
+    &:focus-visible {
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 18px 32px rgba(253, 217, 44, 0.25);
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.mission {
+  width: 100%;
+  max-width: $page-max-width;
+  display: flex;
+  justify-content: center;
+
+  &__card {
+    background: rgba(16, 6, 28, 0.85);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(253, 217, 44, 0.24);
+    border-radius: 28px;
+    padding: clamp(2rem, 4vw, 3rem);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 24px 48px rgba(10, 4, 18, 0.55);
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+
+    h2 {
+      font-family: "Baron", "Poppins", sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: white;
+      letter-spacing: 0.06em;
+    }
+
+    p {
+      font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+      max-width: 38ch;
+      margin: 0 auto;
+    }
+  }
+}
+
+.pain-points {
+  width: 100%;
+  max-width: $page-max-width;
+  background: linear-gradient(135deg, rgba(125, 45, 157, 0.35), rgba(231, 134, 103, 0.2));
+  border-radius: 28px;
+  padding: clamp(2rem, 4vw, 3rem);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 28px 56px rgba(10, 4, 18, 0.45);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -30% auto auto -15%;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(199, 77, 141, 0.55), rgba(199, 77, 141, 0));
+    filter: blur(24px);
+    opacity: 0.7;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  h2 {
+    font-family: "Baron", "Poppins", sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    letter-spacing: 0.08em;
+    color: white;
+  }
+
+  &__list {
+    display: grid;
+    gap: 1.1rem;
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.85rem 1.1rem;
+    border-radius: 18px;
+    background: rgba(16, 6, 28, 0.72);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 16px 32px rgba(10, 4, 18, 0.4);
+  }
+
+  &__icon {
+    font-size: 1.45rem;
+    color: #ff6b6b;
+    filter: drop-shadow(0 6px 12px rgba(255, 107, 107, 0.35));
+  }
+}
+
+.footer {
+  width: 100%;
+  max-width: $page-max-width;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding-top: 2.5rem;
+    gap: 3rem;
+  }
+
+  .hero {
+    border-radius: 26px;
+    padding: 2.5rem 1.75rem;
+
+    &__logo-stack {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__brand-name {
+      font-size: clamp(2.4rem, 10vw, 3rem);
+    }
+
+    &__cta-group {
+      width: 100%;
+      flex-direction: column;
+
+      .action-button {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+
+  .pain-points li {
+    align-items: flex-start;
+  }
+}

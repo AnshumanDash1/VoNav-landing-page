@@ -1,0 +1,11 @@
+.vo-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 16px 40px rgba(125, 45, 157, 0.35));
+}
+
+.vo-logo svg {
+  width: 100%;
+  height: 100%;
+}
