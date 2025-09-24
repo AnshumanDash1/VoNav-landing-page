@@ -1,5 +1,6 @@
 import React from "react";
 import VoLogo from "./components/VoLogo.jsx";
+import StripeCheckoutButton from "./components/StripeCheckoutButton.jsx";
 import "./App.scss";
 
 function ActionButton({ children, variant = "primary" }) {
@@ -20,7 +21,7 @@ export default function App() {
           </div>
           <p className="hero__tagline">A screen reader you don't have to learn</p>
           <div className="hero__cta-group" role="group" aria-label="Primary actions">
-            <ActionButton variant="primary">Buy Now</ActionButton>
+            <StripeCheckoutButton />
             <ActionButton variant="secondary">Video</ActionButton>
           </div>
         </header>
