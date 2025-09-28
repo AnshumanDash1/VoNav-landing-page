@@ -3,7 +3,11 @@ import VoLogo from "./components/VoLogo.jsx";
 import "./App.scss";
 
 function ActionButton({ children, variant = "primary" }) {
-  return <button className={`action-button action-button--${variant}`}>{children}</button>;
+  return (
+    <button className={`action-button action-button--${variant}`}>
+      {children}
+    </button>
+  );
 }
 
 export default function App() {
@@ -18,10 +22,22 @@ export default function App() {
               VoNav
             </span>
           </div>
-          <p className="hero__tagline">A screen reader you don't have to learn</p>
-          <div className="hero__cta-group" role="group" aria-label="Primary actions">
+          <p className="hero__tagline">
+            A screen reader you don't have to learn
+          </p>
+          <div
+            className="hero__cta-group"
+            role="group"
+            aria-label="Primary actions"
+          >
             <ActionButton variant="primary">Buy Now</ActionButton>
-            <ActionButton variant="secondary">Video</ActionButton>
+            <a
+              href="https://www.youtube.com/watch?v=LC5k0qVJHwA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ActionButton variant="secondary">Video</ActionButton>
+            </a>
           </div>
         </header>
       </div>
@@ -39,15 +55,21 @@ export default function App() {
             <h2 id="pain-heading">No more!</h2>
             <ul className="pain-points__list">
               <li>
-                <span className="pain-points__icon" aria-hidden="true">❌</span>
+                <span className="pain-points__icon" aria-hidden="true">
+                  ❌
+                </span>
                 <span>Memorizing hotkeys</span>
               </li>
               <li>
-                <span className="pain-points__icon" aria-hidden="true">❌</span>
+                <span className="pain-points__icon" aria-hidden="true">
+                  ❌
+                </span>
                 <span>Clicking 20 buttons for 1 email</span>
               </li>
               <li>
-                <span className="pain-points__icon" aria-hidden="true">❌</span>
+                <span className="pain-points__icon" aria-hidden="true">
+                  ❌
+                </span>
                 <span>Not knowing what that image is</span>
               </li>
             </ul>
