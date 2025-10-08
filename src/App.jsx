@@ -35,7 +35,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ActionButton variant="primary">waitlist</ActionButton>
+              <ActionButton variant="primary">Waitlist</ActionButton>
             </a>
             <a
               href="https://www.youtube.com/watch?v=LC5k0qVJHwA"
