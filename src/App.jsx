@@ -30,7 +30,13 @@ export default function App() {
             role="group"
             aria-label="Primary actions"
           >
-            <ActionButton variant="primary">Buy Now</ActionButton>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSebloM9bIN8uJ-7qQmRnDuG-WNovoJiwKSYTnlHkgGD6hElsw/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ActionButton variant="primary">Waitlist</ActionButton>
+            </a>
             <a
               href="https://www.youtube.com/watch?v=LC5k0qVJHwA"
               target="_blank"
