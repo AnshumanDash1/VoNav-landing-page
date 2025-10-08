@@ -81,6 +81,32 @@ export default function App() {
             </ul>
           </div>
         </section>
+
+        <section className="about" aria-labelledby="about-heading">
+          <div className="about__content">
+            <h2 id="about-heading">Why we built VoNav</h2>
+            <p>
+              We built VoNav because screen readers feel like they're stuck decades in the
+              past. We wanted something that felt like talking to your friend as they help
+              you with your computer. Your friend wouldn't make you memorize a whole new
+              language just to talk with you, so we don't expect that either. Your friend
+              wouldn't skip half the page, or give up on an image, so we do our best to meet
+              that.
+            </p>
+            <p>
+              VoNav is really just our vision to bring screen readers to 2025. We don't want
+              this to feel like just another screen reader, but a completely different way of
+              using your computer. We're definitely going to have hiccups. It's not going to
+              start off perfect. But if we don't build this, screen readers aren't going to
+              improve themselves.
+            </p>
+            <p>
+              We hope you love VoNav: a voice-first way to navigate your computer that’s
+              fast, natural, and kind of magical. No steep learning curve. No robotic menus.
+              Just you, talking to your machine like it’s 2025.
+            </p>
+          </div>
+        </section>
       </main>
 
       <footer className="footer" role="contentinfo">
